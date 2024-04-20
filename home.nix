@@ -54,7 +54,7 @@
     stegseek
     # Networking
     mtr
-    dnsutil
+    dnsutils
     ipcalc
     # Internet
     firefox
