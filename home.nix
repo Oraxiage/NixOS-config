@@ -1,18 +1,12 @@
 { pkgs, inputs, ... }:
-#  config, pkgs, lib, builtins, inputs, ... before nil 
+
 {
   imports = [ inputs.nixvim.homeManagerModules.nixvim ];
   home.username = "adriaan";
   home.homeDirectory = "/home/adriaan";
-  # link the configuration file in current directory to the specified location in home directory
-  # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
+  # Link configuration file in current directory to the specified location in home directory
   home.file.".config/wallpaper.jpg".source = ./wallpaper.jpg;
-  # link all files in `./scripts` to `~/.config/i3/scripts`
-  # home.file.".config/i3/scripts" = {
-  #   source = ./scripts;
-  #   recursive = true;   # link recursively
-  #   executable = true;  # make all files executable
-  # };
+  # Link configuration files recursively
   home.file.".config/hypr" = {
     source = ./hypr;
     recursive = true;
@@ -23,85 +17,65 @@
     recursive = true;
   };
 
-  # encode the file content in nix configuration file directly
-  # home.file.".xxx".text = ''
-  #     xxx
-  # '';  
-  # Packages that should be installed to the user profile.
+  # User packages
   home.packages = with pkgs; [
-    firefox
-    onlyoffice-bin
-    spotify
-    playerctl # control media
-    vesktop # discord alt.
-    neofetch
-    imv # image viewer
-    mpv # video viewer
-    zathura # pdf viewer
-    glow # render markdown cli
-    ranger
-
-    # show-off
-    cmatrix
-    pipes-rs
-
-    texliveFull
-
-    # cybersecurity tools
-    burpsuite
-    nmap
-    exiftool
-    stegseek
-
-    # utils
-    ripgrep # recursively searches directories for a regex pattern
-    jq # A lightweight and flexible command-line JSON processor
+    # System Administration & Utils
     grim
     slurp
     wl-clipboard
-    #swappy
-    wev # input detection for keybinds
+    wev
     fzf
     zoxide
     eza
     bat
     tlp
-
-    # archives
+    file
+    which
+    gnumake
+    btop
+    strace
+    ltrace
+    nix-output-monitor
+    ranger
+    ripgrep 
+    jq
     gnutar
     zip
     xz
     unzip
     p7zip
-
-    # networking tools
-    mtr # A network diagnostic tool
-    dnsutils  # `dig` + `nslookup`
-    ipcalc  # it is a calculator for the IPv4/v6 addresses
-
-    # misc
-    file
-    which
+    # Development Tools
+    texliveFull
     gcc
-    gnumake
-
-    # nix related
-    #
-    # it provides the command `nom` works just like `nix`
-    # with more details log output
-    nix-output-monitor
-
-    btop  # replacement of htop/nmon
-
-    # system call monitoring
-    strace # system call monitoring
-    ltrace # library call monitoring
+    # Security Tools
+    burpsuite
+    nmap
+    exiftool
+    stegseek
+    # Networking
+    mtr
+    dnsutil
+    ipcalc
+    # Internet
+    firefox
+    vesktop
+    # Multimedia
+    imv
+    mpv
+    playerctl
+    spotify
+    # Productivity
+    onlyoffice-bin
+    zathura
+    glow
+    # Ricing
+    pipes-rs
+    cmatrix
+    neofetch
   ];
-  programs.git = {
-    enable = true;
-    userName = "Oraxiage";
-    userEmail = "a.brumsen@protonmail.com";
-  };
+  
+  # User packages that require more configuration
+  # Desktop
   programs.waybar = {
     enable = true;
     style = ./waybar/style.css;
@@ -112,6 +86,13 @@
     package = pkgs.rofi-wayland;
     theme = "gruvbox-dark";
   };
+  programs.swaylock = {
+    enable = true;
+    settings = {
+      color = "3C3836";
+    };
+  };
+  # Terminal
   programs.kitty = {
     enable = true;
     font = {
@@ -136,6 +117,13 @@
       cat = "bat --paging=never";
     };
   };
+  # Git
+  programs.git = {
+    enable = true;
+    userName = "Oraxiage";
+    userEmail = "a.brumsen@protonmail.com";
+  };
+  # Nixvim
   programs.nixvim = {
     globals.mapleader = ",";
     options = {
@@ -166,22 +154,15 @@
       lsp = {
         enable = true;
 	servers = {
-	  # nix
 	  nil_ls.enable = true;
-	  # python
 	  pyright.enable = true;
-	  # typescript/javascript
 	  tsserver.enable = true;
 	};
       };
     };
   };
-  programs.swaylock = {
-    enable = true;
-    settings = {
-      color = "3C3836";
-    };
-  };
+
+
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new home Manager release introduces backwards
