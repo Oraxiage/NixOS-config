@@ -68,10 +68,14 @@
     onlyoffice-bin
     zathura
     glow
-    # Ricing
+    # Ricing & Funny
     pipes-rs
     cmatrix
     neofetch
+    cava
+    sl
+    fortune
+    cowsay
   ];
   
   # User packages that require more configuration
