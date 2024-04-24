@@ -20,6 +20,7 @@
   # User packages
   home.packages = with pkgs; [
     # System Administration & Utils
+    swaylock-effects
     grim
     slurp
     wl-clipboard
@@ -89,12 +90,6 @@
     enable = true;
     package = pkgs.rofi-wayland;
     theme = "gruvbox-dark";
-  };
-  programs.swaylock = {
-    enable = true;
-    settings = {
-      color = "3C3836";
-    };
   };
   # Terminal
   programs.kitty = {
