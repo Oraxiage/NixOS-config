@@ -59,7 +59,7 @@
     ipcalc
     # Internet
     firefox
-    vesktop
+    discord
     # Multimedia
     imv
     mpv
