@@ -91,6 +91,13 @@
     package = pkgs.rofi-wayland;
     theme = "gruvbox-dark";
   };
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Gruvbox-Dark-BL";
+      package = pkgs.gruvbox-gtk-theme;
+    };
+  };
   # Terminal
   programs.kitty = {
     enable = true;
