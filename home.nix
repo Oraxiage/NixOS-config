@@ -72,7 +72,7 @@
     # Ricing & Funny
     pipes-rs
     cmatrix
-    neofetch
+    fastfetch
     cava
     sl
     fortune
