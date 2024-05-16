@@ -76,7 +76,7 @@
   users.users.adriaan = {
     isNormalUser = true;
     description = "Adriaan Brumsen";
-    extraGroups = [ "networkmanager" "wheel" "wireshark" ];
+    extraGroups = [ "networkmanager" "wheel" "wireshark" "libvirtd" ];
   };
 
   # Allow unfree packages
