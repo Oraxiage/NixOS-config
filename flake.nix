@@ -16,7 +16,7 @@
   outputs = inputs@{ nixpkgs, home-manager, nixvim, ... }: {
     nixosConfigurations = {
       # TODO Change to hostname
-      tetrodotoxin = nixpkgs.lib.nixosSystem {
+      HAL9000 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./configuration.nix

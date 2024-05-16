@@ -20,6 +20,7 @@
   # User packages
   home.packages = with pkgs; [
     # System Administration & Utils
+    virt-manager
     swaylock-effects
     grim
     slurp

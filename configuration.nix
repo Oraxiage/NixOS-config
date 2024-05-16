@@ -38,10 +38,13 @@
   security.pam.services.swaylock = {};
   
   # Hostname
-  networking.hostName = "tetrodotoxin";
+  networking.hostName = "HAL9000";
 
   # Enable networking
   networking.networkmanager.enable = true;
+  
+  # Virtualisation
+  virtualisation.libvirtd.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Brussels";
