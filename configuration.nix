@@ -44,7 +44,7 @@
   networking.networkmanager.enable = true;
   
   # Virtualisation
-  virtualisation.libvirtd.enable = true;
+  virtualisation.virtualbox.host.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Brussels";
@@ -76,7 +76,7 @@
   users.users.adriaan = {
     isNormalUser = true;
     description = "Adriaan Brumsen";
-    extraGroups = [ "networkmanager" "wheel" "wireshark" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "wireshark" "vboxusers" ];
   };
 
   # Allow unfree packages

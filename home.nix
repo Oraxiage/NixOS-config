@@ -20,7 +20,6 @@
   # User packages
   home.packages = with pkgs; [
     # System Administration & Utils
-    virt-manager
     swaylock-effects
     grim
     slurp
@@ -67,7 +66,10 @@
     playerctl
     spotify
     # Productivity
-    onlyoffice-bin
+    hunspell
+    hunspellDicts.fr-any
+    hunspellDicts.en_US
+    libreoffice
     zathura
     glow
     # Ricing & Funny
