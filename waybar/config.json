@@ -70,7 +70,7 @@
             "spacing": 10
         },
         "clock": {
-            "format": "{: %H:%M    %d/%m/%Y}"
+            "format": "  {:%H:%M    %d/%m/%Y}"
         },
         "cpu": {
             "interval": 15,

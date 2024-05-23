@@ -135,7 +135,7 @@
   # Nixvim
   programs.nixvim = {
     globals.mapleader = ",";
-    options = {
+    opts = {
       number = true;
     };
     keymaps = [

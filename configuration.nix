@@ -12,15 +12,6 @@
 
   # Enable Flakes feature
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
-  # Enable SDDM, which requires xserver
-  services.xserver = {
-    enable = true;
-    displayManager.sddm = {
-      enable = true;
-      theme = "where_is_my_sddm_theme";
-    };
-  };
 
   # Enable and configure Hyprland with hints for electron apps
   programs.hyprland = {
@@ -53,9 +44,9 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "be";
-    xkbVariant = "";
+    variant = "";
   };
  
   # Configure console keymap
