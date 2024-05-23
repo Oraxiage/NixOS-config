@@ -20,7 +20,7 @@
   # User packages
   home.packages = with pkgs; [
     # System Administration & Utils
-    swaylock-effects
+    hyprlock
     grim
     slurp
     wl-clipboard

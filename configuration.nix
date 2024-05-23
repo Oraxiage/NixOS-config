@@ -25,9 +25,9 @@
     NIXOS_OZONE_WL = "1";
   };
   
-  # Add this otherwise swaylock won't unlock...
-  security.pam.services.swaylock = {};
-  
+  # PAM
+  security.pam.services.hyprlock = {};
+
   # Hostname
   networking.hostName = "HAL9000";
 
@@ -85,12 +85,6 @@
 
   # System packages
   environment.systemPackages = with pkgs; [
-    (where-is-my-sddm-theme.override {
-      themeConfig.General = {
-        background = toString ./wallpaper.jpg;
-        backgroundMode = "fill";
-      };
-    })
     mako
     libnotify
     swww
