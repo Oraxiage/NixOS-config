@@ -102,14 +102,6 @@
     enable = true;
   };
 
-  services.borgbackup.jobs.home-adriaan = {
-    paths = [ "/home/adriaan/Documents" "/home/adriaan/Pictures" "/home/adriaan/Videos" ];
-    encryption.mode = "none";
-    repo = "/home/adriaan/Backups";
-    compression = "auto,zstd";
-    startAt = "daily";
-  };
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
