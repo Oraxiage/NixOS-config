@@ -72,6 +72,7 @@
     libreoffice
     zathura
     glow
+    affine
     # Ricing & Funny
     pipes-rs
     cmatrix
