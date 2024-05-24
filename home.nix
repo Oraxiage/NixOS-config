@@ -72,7 +72,6 @@
     libreoffice
     zathura
     glow
-    anytype
     # Ricing & Funny
     pipes-rs
     cmatrix
