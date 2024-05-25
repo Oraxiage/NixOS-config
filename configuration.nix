@@ -83,6 +83,9 @@
     EDITOR = "nvim";
   };
 
+  # Banners
+  environment.etc."issue".source = ./banners/issue;
+
   # System packages
   environment.systemPackages = with pkgs; [
     mako

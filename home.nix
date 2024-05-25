@@ -72,7 +72,6 @@
     libreoffice
     zathura
     glow
-    affine
     # Ricing & Funny
     pipes-rs
     cmatrix
@@ -124,7 +123,6 @@
       '';
     shellAliases = {
       l = "eza -loah --icons=always";
-      cat = "bat --paging=never";
     };
   };
   # Git
@@ -161,6 +159,8 @@
       vimtex.enable = true;
       telescope.enable = true;
       startify.enable = true;
+      autoclose.enable = true;
+      indent-o-matic.enable = true;
       lsp = {
         enable = true;
 	servers = {
