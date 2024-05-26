@@ -132,7 +132,9 @@
     enable = true;
     enableCompletion = true;
     bashrcExtra = ''
-      eval "$(starship init bash)"
+      if [ -n "$KITTY_WINDOW_ID" ]; then
+          eval "$(starship init bash)"
+      fi
       eval "$(zoxide init --cmd cd bash)"
       '';
     shellAliases = {
