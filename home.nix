@@ -163,11 +163,11 @@
       indent-o-matic.enable = true;
       lsp = {
         enable = true;
-	servers = {
-	  nil_ls.enable = true;
-	  pyright.enable = true;
-	  tsserver.enable = true;
-	};
+	      servers = {
+	        nil_ls.enable = true;
+	        pyright.enable = true;
+	        tsserver.enable = true;
+	      };
       };
     };
   };
