@@ -82,7 +82,6 @@
     fortune
     cowsay
     hyprcursor
-    bibata-cursors
   ];
   
   # User packages that require more configuration
@@ -96,6 +95,12 @@
     enable = true;
     package = pkgs.rofi-wayland;
     theme = "gruvbox-dark";
+  };
+  home.pointercursor = {
+    gtk.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 24;
   };
   gtk = {
     enable = true;
