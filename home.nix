@@ -2,88 +2,100 @@
 
 {
   imports = [ inputs.nixvim.homeManagerModules.nixvim ];
-  home.username = "adriaan";
-  home.homeDirectory = "/home/adriaan";
-  # Link configuration file in current directory to the specified location in home directory
-  home.file.".config/wallpaper.jpg".source = ./wallpaper.jpg;
-  # Link configuration files recursively
-  home.file.".config/hypr" = {
-    source = ./hypr;
-    recursive = true;
-    executable = true;
-  };
-  home.file.".config/ranger" = {
-    source = ./ranger;
-    recursive = true;
-  };
+  home = {
+    username = "adriaan";
+    homeDirectory = "/home/adriaan";
+    file = {
+      # Link configuration file in current directory to the specified location in home directory
+      ".config/wallpaper.jpg".source = ./wallpaper.jpg;
+      # Link configuration files recursively
+      ".config/hypr" = {
+        source = ./hypr;
+        recursive = true;
+        executable = true; 
+      };
+      ".config/ranger" = {
+        source = ./ranger;
+        recursive = true;
+      };
+    };
+    # Pointer
+    pointerCursor = {
+      gtk.enable = true;
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Classic";
+      size = 24;
+    };
+    # User packages
+    packages = with pkgs; [
+      # System Administration & Utils
+      hyprlock
+      grim
+      slurp
+      swappy
+      wl-clipboard
+      wev
+      fzf
+      zoxide
+      eza
+      bat
+      tlp
+      file
+      which
+      gnumake
+      btop
+      strace
+      ltrace
+      nix-output-monitor
+      ranger
+      ripgrep 
+      jq
+      gnutar
+      zip
+      xz
+      unzip
+      p7zip
+      # Development Tools
+      texliveFull
+      gcc
+      # Security Tools
+      burpsuite
+      nmap
+      exiftool
+      stegseek
+      # Networking
+      mtr
+      dnsutils
+      ipcalc
+      # Internet
+      firefox
+      discord
+      # Multimedia
+      imv
+      mpv
+      playerctl
+      spotify
+      # Productivity
+      hunspell
+      hunspellDicts.fr-any
+      hunspellDicts.en_US
+      libreoffice
+      zathura
+      glow
+      # Ricing & Funny
+      pipes-rs
+      cmatrix
+      fastfetch
+      cava
+      sl
+      fortune
+      cowsay
+      hyprcursor
+      ];
+   };
 
-  # User packages
-  home.packages = with pkgs; [
-    # System Administration & Utils
-    hyprlock
-    grim
-    slurp
-    swappy
-    wl-clipboard
-    wev
-    fzf
-    zoxide
-    eza
-    bat
-    tlp
-    file
-    which
-    gnumake
-    btop
-    strace
-    ltrace
-    nix-output-monitor
-    ranger
-    ripgrep 
-    jq
-    gnutar
-    zip
-    xz
-    unzip
-    p7zip
-    # Development Tools
-    texliveFull
-    gcc
-    # Security Tools
-    burpsuite
-    nmap
-    exiftool
-    stegseek
-    # Networking
-    mtr
-    dnsutils
-    ipcalc
-    # Internet
-    firefox
-    discord
-    # Multimedia
-    imv
-    mpv
-    playerctl
-    spotify
-    # Productivity
-    hunspell
-    hunspellDicts.fr-any
-    hunspellDicts.en_US
-    libreoffice
-    zathura
-    glow
-    # Ricing & Funny
-    pipes-rs
-    cmatrix
-    fastfetch
-    cava
-    sl
-    fortune
-    cowsay
-    hyprcursor
-  ];
-  
+
+    
   # User packages that require more configuration
   # Desktop
   programs.waybar = {
@@ -96,13 +108,7 @@
     package = pkgs.rofi-wayland;
     theme = "gruvbox-dark";
   };
-  home.pointerCursor = {
-    gtk.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Classic";
-    size = 24;
-  };
-  gtk = {
+ gtk = {
     enable = true;
     theme = {
       name = "Gruvbox-Dark-BL";
@@ -148,13 +154,13 @@
     keymaps = [
       {
         mode = "n";
-	key = "ff";
-	action = "<cmd>Telescope find_files<cr>";
+	      key = "ff";
+	      action = "<cmd>Telescope find_files<cr>";
       }
       {
         mode = "n";
-	key = "fb";
-	action = "<cmd>Telescope buffers<cr>";
+	      key = "fb";
+	      action = "<cmd>Telescope buffers<cr>";
       }
     ];
     enable = true;
