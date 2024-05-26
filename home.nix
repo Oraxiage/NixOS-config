@@ -23,6 +23,7 @@
     hyprlock
     grim
     slurp
+    swappy
     wl-clipboard
     wev
     fzf
@@ -80,6 +81,8 @@
     sl
     fortune
     cowsay
+    hyprcursor
+    bibata-cursors
   ];
   
   # User packages that require more configuration
