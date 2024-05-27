@@ -174,7 +174,7 @@
       lualine.enable = true;
       vimtex = {
         enable = true;
-        extraConfig.view_method = "zathura"
+        extraConfig.view_method = "zathura";
       };
       telescope.enable = true;
       startify.enable = true;
