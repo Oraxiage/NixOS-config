@@ -172,7 +172,10 @@
     plugins = {
       bufferline.enable = true;
       lualine.enable = true;
-      vimtex.enable = true;
+      vimtex = {
+        enable = true;
+        extraConfig.view_method = "zathura"
+      };
       telescope.enable = true;
       startify.enable = true;
       autoclose.enable = true;
