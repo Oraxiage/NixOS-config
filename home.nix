@@ -80,6 +80,7 @@
       hunspellDicts.fr-any
       hunspellDicts.en_US
       libreoffice
+      drawio
       zathura
       glow
       # Ricing & Funny
