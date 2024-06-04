@@ -80,8 +80,8 @@
       hunspellDicts.fr-any
       hunspellDicts.en_US
       libreoffice
+      rnote
       drawio
-      lorien
       zathura
       glow
       # Ricing & Funny
