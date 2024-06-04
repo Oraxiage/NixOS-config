@@ -81,6 +81,7 @@
       hunspellDicts.en_US
       libreoffice
       drawio
+      lorien
       zathura
       glow
       # Ricing & Funny
