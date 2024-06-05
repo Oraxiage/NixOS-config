@@ -80,10 +80,8 @@
       hunspellDicts.fr-any
       hunspellDicts.en_US
       libreoffice
-      rnote
       drawio
       zathura
-      glow
       # Ricing & Funny
       pipes-rs
       cmatrix
@@ -174,14 +172,20 @@
     plugins = {
       bufferline.enable = true;
       lualine.enable = true;
-      vimtex = {
-        enable = true;
-        settings.view_method = "zathura";
-      };
       telescope.enable = true;
       startify.enable = true;
       autoclose.enable = true;
       indent-o-matic.enable = true;
+      markdown-preview = {
+        enable = true;
+        settings = {
+          browser = "firefox";
+        };
+      };
+      vimtex = {
+        enable = true;
+        settings.view_method = "zathura";
+      };
       lsp = {
         enable = true;
 	      servers = {
