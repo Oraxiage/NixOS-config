@@ -82,6 +82,8 @@
       libreoffice
       drawio
       zathura
+      # Gaming
+      mgba
       # Ricing & Funny
       pipes-rs
       cmatrix
