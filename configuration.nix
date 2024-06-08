@@ -28,11 +28,11 @@
   # PAM
   security.pam.services.hyprlock = {};
 
-  # Hostname
-  networking.hostName = "HAL9000";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
+  # Networking
+  networking = {
+    hostName = "HAL9000";
+    networkmanager.enable = true;
+  };
   
   # Virtualisation
   virtualisation.virtualbox.host.enable = true;

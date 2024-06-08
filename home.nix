@@ -67,6 +67,8 @@
       mtr
       dnsutils
       ipcalc
+      openvpn
+      wireguard-tools
       # Internet
       firefox
       discord
