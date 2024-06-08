@@ -86,7 +86,6 @@
       zathura
       # Gaming
       mgba
-      steam
       # Ricing & Funny
       pipes-rs
       cmatrix
