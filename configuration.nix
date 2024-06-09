@@ -35,8 +35,10 @@
   };
   
   # Virtualisation
-  virtualisation.virtualbox.host.enable = true;
-
+  virtualisation = {
+    virtualbox.host.enable = true;
+    docker.enable = true;
+  };
   # Set your time zone.
   time.timeZone = "Europe/Brussels";
 

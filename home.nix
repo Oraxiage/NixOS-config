@@ -63,6 +63,7 @@
       nmap
       exiftool
       stegseek
+      exegol
       # Networking
       mtr
       dnsutils
