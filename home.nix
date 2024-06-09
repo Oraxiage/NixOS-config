@@ -86,6 +86,7 @@
       zathura
       # Gaming
       mgba
+      prismlauncher
       # Ricing & Funny
       pipes-rs
       cmatrix
