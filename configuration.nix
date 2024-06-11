@@ -102,6 +102,10 @@
     package = pkgs.wireshark;
   };
 
+  programs.steam = {
+    enable = true;
+  };
+
   # Services
   services.tlp = {
     enable = true;
