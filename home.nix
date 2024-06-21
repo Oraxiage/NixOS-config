@@ -72,7 +72,7 @@
       wireguard-tools
       # Internet
       firefox
-      discord
+      vesktop
       # Multimedia
       imv
       mpv
